@@ -1,14 +1,14 @@
 package binarytree;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import objects.TreeNode;
 
-public class InvertBinaryTreeTest extends TestCase {
+public class InvertBinaryTreeTest {
 
     private InvertBinaryTree invertBinaryTree;
 
     public void setUp() throws Exception {
-        super.setUp();
         invertBinaryTree = new InvertBinaryTree();
     }
 
@@ -16,6 +16,7 @@ public class InvertBinaryTreeTest extends TestCase {
         invertBinaryTree = null;
     }
 
+    @Test
     public void testInvertTree() {
         TreeNode root = new TreeNode(4);
         root.left = new TreeNode(2);
@@ -27,12 +28,12 @@ public class InvertBinaryTreeTest extends TestCase {
 
         TreeNode invertedRoot = invertBinaryTree.invertTree(root);
 
-        assertEquals(4, invertedRoot.val);
-        assertEquals(7, invertedRoot.left.val);
-        assertEquals(2, invertedRoot.right.val);
-        assertEquals(9, invertedRoot.left.left.val);
-        assertEquals(6, invertedRoot.left.right.val);
-        assertEquals(3, invertedRoot.right.left.val);
-        assertEquals(1, invertedRoot.right.right.val);
+        Assertions.assertEquals(4, invertedRoot.val);
+        Assertions.assertEquals(7, invertedRoot.left.val);
+        Assertions.assertEquals(2, invertedRoot.right.val);
+        Assertions.assertEquals(9, invertedRoot.left.left.val);
+        Assertions.assertEquals(6, invertedRoot.left.right.val);
+        Assertions.assertEquals(3, invertedRoot.right.left.val);
+        Assertions.assertEquals(1, invertedRoot.right.right.val);
     }
 }

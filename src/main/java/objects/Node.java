@@ -7,9 +7,12 @@ public class Node {
     public ArrayList<Node> children;
     Node firstChild;
     Node nextSibling;
+    Node parent;
     public Node(int data)
     {
         this.data = data;
         this.children = new ArrayList<>();
     }
+
+
 }
