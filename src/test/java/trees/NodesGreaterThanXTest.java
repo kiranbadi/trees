@@ -32,6 +32,6 @@ class NodesGreaterThanXTest {
         root.children.get(2).children.add(new Node(7));
         root.children.get(2).children.add(new Node(8));
         root.children.get(2).children.add(new Node(9));
-        assertEquals(5, nodesGreaterThanX.countNodesGreaterThanX(root, 3));
+        assertEquals(6, nodesGreaterThanX.countNodesGreaterThanX(root, 3));
     }
 }

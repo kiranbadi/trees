@@ -6,12 +6,12 @@ public class TreeNode {
     public TreeNode right;
     public TreeNode next;
 
-    public TreeNode(int x) {
-        val = x;
+    public TreeNode(int val) {
+        this.val = val;
     }
 
-    public TreeNode(int x, TreeNode left, TreeNode right) {
-        val = x;
+    public TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
         this.left = left;
         this.right = right;
     }
