@@ -1,6 +1,8 @@
 package binarytree;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import objects.TreeNode;
 
@@ -8,10 +10,12 @@ public class SymmetryTreeTest {
 
     private SymmetryTree symmetryTree;
 
+    @BeforeEach
     public void setUp() throws Exception {
         symmetryTree = new SymmetryTree();
     }
 
+    @AfterEach
     public void tearDown()  {
         symmetryTree = null;
     }
@@ -26,7 +30,7 @@ public class SymmetryTreeTest {
         root.right.left = new TreeNode(4);
         root.right.right = new TreeNode(3);
         assert symmetryTree.isSymmetric(root);
-        Assertions.assertFalse(symmetryTree.isSymmetric(root));
+        Assertions.assertTrue(symmetryTree.isSymmetric(root));
     }
 
     @Test
@@ -46,6 +50,6 @@ public class SymmetryTreeTest {
         t2.right.left = new TreeNode(4);
         t2.right.right = new TreeNode(3);
         assert symmetryTree.isMirror(t1, t2);
-        Assertions.assertFalse(symmetryTree.isMirror(t2, t1));
+        Assertions.assertTrue(symmetryTree.isMirror(t2, t1));
     }
 }

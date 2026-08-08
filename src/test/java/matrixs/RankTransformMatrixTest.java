@@ -21,10 +21,16 @@ class RankTransformMatrixTest {
 
     @Test
     void matrixRankTransform() {
-        int[][] matrix = {{1, 2}, {3, 4}};
-        int[][] expected = {{1, 2}, {3, 4}};
+        int[][] matrix = {
+                {1, 2},
+                {3, 4}
+        };
+        int[][] expected = {
+                {1, 2},
+                {2, 3}
+        };
         int[][] actual = rankTransformMatrix.matrixRankTransform(matrix);
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 }

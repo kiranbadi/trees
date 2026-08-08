@@ -1,6 +1,8 @@
 package binarytree;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import objects.TreeNode;
 
@@ -8,10 +10,13 @@ public class BinaryTreeTest {
 
     private BinaryTree binaryTree;
 
+
+    @BeforeEach
     public void setUp() throws Exception {
         binaryTree = new BinaryTree(1);
     }
 
+    @AfterEach
     public void tearDown()  {
         binaryTree = null;
 
